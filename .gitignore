@@ -35,7 +35,7 @@ target/
 /docs/
 
 # SQLite Database Files
-*.db
+# *.db
 *.sqlite
 *.sqlite3
 *.db-journal

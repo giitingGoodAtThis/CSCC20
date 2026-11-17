@@ -123,7 +123,10 @@ Before running the application, you will need to have the following installed on
 Open terminal (or cmd), and go to the project folder and run the following:
 
 ```
-javac -cp "lib/sqlite-jdbc-3.54.1.0.jar" -d bin -sourcepath . $(find models database dao services ui src -name "*.java"
+javac -cp "lib/sqlite-jdbc-3.54.1.0.jar" \
+-d bin \
+-sourcepath . \
+$(find models database dao services ui src -name "*.java")
 ```
 
 The -d bin option instructs the Java compiler to place compiled .class files inside the bin directory.
@@ -131,8 +134,11 @@ The -d bin option instructs the Java compiler to place compiled .class files ins
 ### Running the Main App
 After successful compilation, you can run the application by executing:
 
+
 ```
-java --enable-native-access=ALL-UNNAMED -cp "bin:lib/*" app.Main
+java --enable-native-access=ALL-UNNAMED \
+-cp "bin:lib/*" \
+app.Main
 ```
 
 

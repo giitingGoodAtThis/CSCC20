@@ -13,17 +13,6 @@ public class DatabaseConnection {
 
     public static Connection getConnection() throws SQLException {
 
-        Connection conn = DriverManager.getConnection(URL);
-
-        try {
-
-            // DatabaseInitializer.resetDatabase(conn);
-            DatabaseInitializer.initialize(conn);
-            return conn;
-
-        } catch (SQLException e) {
-            conn.close();
-            throw e;
-        }
+        return DriverManager.getConnection(URL);
     }
 }
