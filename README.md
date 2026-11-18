@@ -141,4 +141,8 @@ java --enable-native-access=ALL-UNNAMED \
 app.Main
 ```
 
+### Running javadoc
 
+```
+javadoc -d docs -sourcepath .:src -subpackages models:dao:database:app -author -version
+```
